@@ -26,18 +26,28 @@ function set_function_monitor_mode(app)
         app.status_text_area);                                          % Textfeld des Status
 
     % Slider für x-Achse des Signalplots
-    app.signal_slider_monitor.ValueChangedFcn = @(src, ~) slider_changed(src, app.signal_graph, ...
-        app.signal_range_check.Value, app.signal_range_edit_field, app.status_lamp, app.status_text_area);
+    app.signal_slider_monitor.ValueChangedFcn = @(src, ~) slider_changed( ...
+        src, ...                                                        % Slider
+        app.signal_graph_monitor, ...                                   % Graph
+        app.signal_range_check_monitor.Value, ...                       % Wahl für fixierten Bereich
+        app.signal_range_edit_field_monitor, ...                        % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                            % Licht des Status
+        app.status_text_area);                                          % Textfeld des Status
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.signal_range_check_monitor.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.signal_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.signal_range_check_monitor.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                                        % Checkbox für fixierten Bereich
+        app.signal_range_edit_field_monitor, ...                        % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                            % Licht des Status
+        app.status_text_area);                                          % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse
-    app.signal_range_edit_field_monitor.ValueChangedFcn = @(src, ~)range_edit_field_changed(src, ...
-        app.signal_graph, app.signal_slider, app.status_lamp, app.status_text_area);    
+    app.signal_range_edit_field_monitor.ValueChangedFcn = @(src, ~)range_edit_field_changed( ...
+        src, ...                                                        % Eingabefeld für fixierten Bereich der x-Achse
+        app.signal_graph_monitor, ...                                   % Graph
+        app.signal_slider_monitor, ...                                  % Slider
+        app.status_lamp, ...                                            % Licht des Status
+        app.status_text_area);                                          % Textfeld des Status
 
     % Button für Suchen der Datei zu Eigenfrequenzen
     app.search_data_eigenfreq_button_monitor.ButtonPushedFcn = @(~, ~) search_data_button_pushed( ...
@@ -61,20 +71,35 @@ function set_function_monitor_mode(app)
     app.show_vector_button_monitor.ButtonPushedFcn = @(~, ~) show_vector_button_pushed_monitor(app);     
 
     % Komponente im Tab "Parameter"
-    app.oma_fdd_check_monitor.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.oma_ssi_cov_check_monitor.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.oma_ssi_data_check_monitor.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.lowest_freq_edit_field_monitor.ValueChangingFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.seg_type_radio_group.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.num_segment_edit_field.ValueChangingFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.time_interval_edit_field.ValueChangingFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.psd_mode_radio_group_monitor.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.num_window_dropdown_monitor.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.num_fft_dropdown_monitor.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
-    app.efdd_auto_peak_switch_monitor.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.oma_fdd_check_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.oma_ssi_cov_check_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.oma_ssi_data_check_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.lowest_freq_edit_field_monitor.ValueChangingFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.seg_type_radio_group.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.num_segment_edit_field.ValueChangingFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.time_interval_edit_field.ValueChangingFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.psd_mode_radio_group_monitor.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.num_window_dropdown_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.num_fft_dropdown_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
+    app.efdd_auto_peak_switch_monitor.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed_monitor(app, src, event);
 
     % Subtabs für Parameter verschiedener OMA-Methoden
-    app.sub_tab_group_parameter_tab_monitor.SelectionChangedFcn = @(src, event) tab_changed(src, event, app.status_lamp, app.status_text_area);
+    app.sub_tab_group_parameter_tab_monitor.SelectionChangedFcn = @(src, event) tab_changed( ...
+        src, ...                                                        % Subtabs
+        event, ...                                                      % Ereignis
+        app.status_lamp, ...                                            % Licht des Status
+        app.status_text_area);                                          % Textfeld des Status
 
     % Button für Durchführen der Zustandsüberwachung
     app.run_monitor_button.ButtonPushedFcn = @(~, ~) run_monitor_button_pushed_pre_check(app.fig, app);

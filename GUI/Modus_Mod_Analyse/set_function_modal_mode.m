@@ -6,9 +6,9 @@ function set_function_modal_mode(app)
 
     % Button für Suchen der Datei zu Messdaten
     app.search_data_button.ButtonPushedFcn = @(~, ~) search_data_button_pushed( ...
-        app.path_edit_field, ...                        % Eingabefeld für Dateipfad
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.path_edit_field, ...                            % Eingabefeld für Dateipfad
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Importieren der Messdaten
     app.import_button.ButtonPushedFcn = @(~, ~) import_button_pushed(app);
@@ -18,151 +18,191 @@ function set_function_modal_mode(app)
 
     % Button für Importieren der Zuweisungen
     app.assign_import_button.ButtonPushedFcn = @(~, ~) assign_import_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.assign_table, ...                           % Tabelle für Zuweisungen
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.assign_table, ...                               % Tabelle für Zuweisungen
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Importieren der Knoten
     app.node_import_button.ButtonPushedFcn = @(~, ~) node_import_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.node_table, ...                             % Tabelle für Knoten
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.node_table, ...                                 % Tabelle für Knoten
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Auswahl einer Zeile aus der Tabelle für Knoten
     app.node_table.SelectionChangedFcn = @(src, event) row_selected(src, event);
 
     % Button für Einfügen eines Knotens
     app.node_insert_button.ButtonPushedFcn = @(~, ~) node_insert_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.node_table, ...                             % Tabelle für Knoten
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.node_table, ...                                 % Tabelle für Knoten
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Entfernen eines Knotens
     app.node_remove_button.ButtonPushedFcn = @(~, ~) node_remove_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.node_table, ...                             % Tabelle für Knoten
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.node_table, ...                                 % Tabelle für Knoten
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Importieren der Linien
     app.line_import_button.ButtonPushedFcn = @(~, ~) line_import_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.node_table, ...                             % Tabelle für Knoten
-        app.line_table, ...                             % Tabelle für Linien
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.node_table, ...                                 % Tabelle für Knoten
+        app.line_table, ...                                 % Tabelle für Linien
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Auswahl einer Zeile aus der Tabelle für Linien
     app.line_table.SelectionChangedFcn = @(src, event) row_selected(src, event);
     
     % Button für Einfügen einer Linie
     app.line_insert_button.ButtonPushedFcn = @(~, ~) line_insert_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.node_table, ...                             % Tabelle für Knoten
-        app.line_table, ...                             % Tabelle für Linien
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.node_table, ...                                 % Tabelle für Knoten
+        app.line_table, ...                                 % Tabelle für Linien
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Entfernen einer Linie
     app.line_remove_button.ButtonPushedFcn = @(~, ~) line_remove_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.line_table, ...                             % Tabelle für Linien
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.line_table, ...                                 % Tabelle für Linien
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Importieren der Flächen
     app.surface_import_button.ButtonPushedFcn = @(~, ~) surface_import_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.line_table, ...                             % Tabelle für Linien
-        app.surface_table, ...                          % Tabelle für Flächen
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.line_table, ...                                 % Tabelle für Linien
+        app.surface_table, ...                              % Tabelle für Flächen
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Auswahl einer Zeile aus der Tabelle für Flächen
     app.surface_table.SelectionChangedFcn = @(src, event) row_selected(src, event);
 
     % Button für Einfügen einer Fläche
     app.surface_insert_button.ButtonPushedFcn = @(~, ~) surface_insert_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.line_table, ...                             % Tabelle für Linien
-        app.surface_table, ...                          % Tabelle für Flächen
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.line_table, ...                                 % Tabelle für Linien
+        app.surface_table, ...                              % Tabelle für Flächen
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Entfernen einer Fläche
     app.surface_remove_button.ButtonPushedFcn = @(~, ~) surface_remove_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.surface_table, ...                          % Tabelle für Flächen
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.surface_table, ...                              % Tabelle für Flächen
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Aktualisieren der Geometrie
     app.update_geometry_button.ButtonPushedFcn = @(~, ~) update_geometry_button_pushed(app);
 
     % Button für Darstellen des Signalplots
     app.update_signal_button.ButtonPushedFcn = @(~, ~) update_signal_button_pushed( ...
-        app.fig.UserData.cache.modal, ...               % Cache-System
-        app.sensor_dropdown, ...                        % Dropdown für Sensoren
-        app.time_series_radio.Value, ...                % Wahl für Zeitreihe
-        app.spectrum_radio.Value, ...                   % Wahl für Frequenzspektrum
-        app.signal_graph, ...                           % Graph für Signalplot
-        app.signal_slider, ...                          % Slider für x-Achse
-        app.signal_range_edit_field, ...                % Eingabefeld für fixierten Bereich der x-Achse
-        app.status_lamp, ...                            % Licht des Status
-        app.status_text_area);                          % Textfeld des Status
+        app.fig.UserData.cache.modal, ...                   % Cache-System
+        app.sensor_dropdown, ...                            % Dropdown für Sensoren
+        app.time_series_radio.Value, ...                    % Wahl für Zeitreihe
+        app.spectrum_radio.Value, ...                       % Wahl für Frequenzspektrum
+        app.signal_graph, ...                               % Graph für Signalplot
+        app.signal_slider, ...                              % Slider für x-Achse
+        app.signal_range_edit_field, ...                    % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Slider für x-Achse des Signalplots
-    app.signal_slider.ValueChangedFcn = @(src, ~) slider_changed(src, app.signal_graph, ...
-        app.signal_range_check.Value, app.signal_range_edit_field, app.status_lamp, app.status_text_area);
+    app.signal_slider.ValueChangedFcn = @(src, ~) slider_changed( ...
+        src, ...                                            % Slider
+        app.signal_graph, ...                               % Graph
+        app.signal_range_check.Value, ...                   % Wahl für fixierten Bereich
+        app.signal_range_edit_field, ...                    % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.signal_range_check.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.signal_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.signal_range_check.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                            % Checkbox für fixierten Bereich
+        app.signal_range_edit_field, ...                    % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse
-    app.signal_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed(src, ...
-        app.signal_graph, app.signal_slider, app.status_lamp, app.status_text_area);
+    app.signal_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed( ...
+        src, ...                                            % Eingabefeld für fixierten Bereich der x-Achse
+        app.signal_graph, ...                               % Graph
+        app.signal_slider, ...                              % Slider
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Komponente im Tab "Parameter"
-    app.oma_fdd_check.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.oma_ssi_cov_check.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.oma_ssi_data_check.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.lowest_freq_edit_field.ValueChangingFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.psd_mode_radio_group.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.num_window_dropdown.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.num_fft_dropdown.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.auto_peak_switch.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.num_mode_radio_group_fdd.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.efdd_auto_peak_switch.ValueChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.auto_pol_switch.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.num_mode_radio_group_ssi_cov.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.auto_pol_switch2.ValueChangedFcn =  @(src, event) ui_component_tab_parameter_changed(app, src, event);
-    app.num_mode_radio_group_ssi_data.SelectionChangedFcn = @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.oma_fdd_check.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.oma_ssi_cov_check.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.oma_ssi_data_check.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.lowest_freq_edit_field.ValueChangingFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.psd_mode_radio_group.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.num_window_dropdown.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.num_fft_dropdown.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.auto_peak_switch.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.num_mode_radio_group_fdd.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.efdd_auto_peak_switch.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.auto_pol_switch.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.num_mode_radio_group_ssi_cov.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.auto_pol_switch2.ValueChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
+    app.num_mode_radio_group_ssi_data.SelectionChangedFcn = ...
+        @(src, event) ui_component_tab_parameter_changed(app, src, event);
 
     % Subtabs für Parameter verschiedener OMA-Methoden
-    app.sub_tab_group_parameter_tab.SelectionChangedFcn = @(src, event) tab_changed(src, event, app.status_lamp, app.status_text_area);
+    app.sub_tab_group_parameter_tab.SelectionChangedFcn = @(src, event) tab_changed( ...
+        src, ...                                            % Subtabs
+        event, ...                                          % Ereignis
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
     
     % Button für Durchführen der Modalanalyse
     app.run_analysis_button.ButtonPushedFcn = @(~, ~) run_analysis_button_pushed_pre_check(app.fig, app);
 
     % Slider für x-Achse des Graphs der PSD
-    app.psd_graph_slider.ValueChangedFcn = @(src, ~) slider_changed(src, app.psd_graph, ...
-        app.psd_graph_range_check.Value, app.psd_graph_range_edit_field, app.status_lamp, app.status_text_area, app.psd_graph2);
+    app.psd_graph_slider.ValueChangedFcn = @(src, ~) slider_changed( ...
+        src, ...                                            % Slider
+        app.psd_graph, ...                                  % Graph
+        app.psd_graph_range_check.Value, ...                % Wahl für fixierten Bereich
+        app.psd_graph_range_edit_field, ...                 % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area, ...                           % Textfeld des Status
+        app.psd_graph2);                                    % 2. Graph
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.psd_graph_range_check.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.psd_graph_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.psd_graph_range_check.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                            % Checkbox für fixierten Bereich
+        app.psd_graph_range_edit_field, ...                 % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse
-    app.psd_graph_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed(src, ...
-        app.psd_graph, app.psd_graph_slider, app.status_lamp, app.status_text_area, app.psd_graph2);
+    app.psd_graph_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed( ...
+        src, ...                                            % Eingabefeld für fixierten Bereich der x-Achse
+        app.psd_graph, ...                                  % Graph
+        app.psd_graph_slider, ...                           % Slider
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area, ...                           % Textfeld des Status
+        app.psd_graph2);                                    % 2. Graph
 
     % Button für Auswählen der Peaks
     app.choose_peak_button.ButtonPushedFcn = @(~, ~)choose_peak_button_pushed(app, app.fig);
@@ -177,18 +217,28 @@ function set_function_modal_mode(app)
     app.run_efdd_button.ButtonPushedFcn = @(~, ~)run_efdd_button_pushed(app.fig, app);
 
     % Slider für x-Achse des Graphs für SBF
-    app.sbf_slider.ValueChangedFcn = @(src, ~) slider_changed(src, app.sbf_graph, ...
-        app.sbf_range_check.Value, app.sbf_range_edit_field, app.status_lamp, app.status_text_area);
+    app.sbf_slider.ValueChangedFcn = @(src, ~) slider_changed( ...
+        src, ...                                            % Slider
+        app.sbf_graph, ...                                  % Graph
+        app.sbf_range_check.Value, ...                      % Wahl für fixierten Bereich
+        app.sbf_range_edit_field, ...                       % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.sbf_range_check.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.sbf_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.sbf_range_check.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                            % Checkbox für fixierten Bereich
+        app.sbf_range_edit_field, ...                       % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse
-    app.sbf_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed(src, ...
-        app.sbf_graph, app.sbf_slider, app.status_lamp, app.status_text_area);  
+    app.sbf_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed( ...
+        src, ...                                            % Eingabefeld für fixierten Bereich der x-Achse
+        app.sbf_graph, ...                                  % Graph
+        app.sbf_slider, ...                                 % Slider
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Auswahl einer Zeile aus der Tabelle für Frequenzen und MAC-Grenzen
     app.freq_mac_table.SelectionChangedFcn =  @(src, event) freq_mac_table_row_selected(src, event, app);
@@ -203,10 +253,11 @@ function set_function_modal_mode(app)
     app.backsignal_slider.ValueChangedFcn = @(src, ~) backsignal_slider_changed(app);
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.backsignal_range_check.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.backsignal_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.backsignal_range_check.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                            % Checkbox für fixierten Bereich
+        app.backsignal_range_edit_field, ...                % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse für Korrelationsfunktion der 1. Singulärwerte
     app.backsignal_range_edit_field.ValueChangedFcn = @(src, ~)backslider_range_edit_field_changed(app);  
@@ -244,18 +295,28 @@ function set_function_modal_mode(app)
     app.pole_chosen_switch.ValueChangedFcn = @(~, ~) filter_changed(app);       % Gewählte Pole
 
     % Slider für x-Achse des Stabilisationsdiagramms
-    app.stab_graph_slider.ValueChangedFcn = @(src, ~) slider_changed(src, app.stab_graph, ...
-        app.stab_graph_range_check.Value, app.stab_graph_range_edit_field, app.status_lamp, app.status_text_area);
+    app.stab_graph_slider.ValueChangedFcn = @(src, ~) slider_changed( ...
+        src, ...                                            % Slider
+        app.stab_graph, ...                                 % Graph
+        app.stab_graph_range_check.Value, ...               % Wahl für fixierten Bereich
+        app.stab_graph_range_edit_field, ...                % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Checkbox für fixierten Bereich der x-Achse
-    app.stab_graph_range_check.ValueChangedFcn = @(src, ~) activate_component_check_changed(src, ...
-        app.stab_graph_range_edit_field, app.status_lamp, app.status_text_area, ...
-        '>> Fixierter Bereich der x-Achse aktiviert', ...
-        '>> Fixierter Bereich der x-Achse deaktiviert');
+    app.stab_graph_range_check.ValueChangedFcn = @(src, ~) range_check_changed( ...
+        src, ...                                            % Checkbox für fixierten Bereich
+        app.stab_graph_range_edit_field, ...                % Eingabefeld für fixierten Bereich der x-Achse
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Eingabefeld für fixierten Bereich der x-Achse
-    app.stab_graph_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed(src, ...
-        app.stab_graph, app.stab_graph_slider, app.status_lamp, app.status_text_area);
+    app.stab_graph_range_edit_field.ValueChangedFcn = @(src, ~)range_edit_field_changed( ...
+        src, ...                                            % Eingabefeld für fixierten Bereich der x-Achse
+        app.stab_graph, ...                                 % Graph
+        app.stab_graph_slider, ...                          % Slider
+        app.status_lamp, ...                                % Licht des Status
+        app.status_text_area);                              % Textfeld des Status
 
     % Button für Auswählen der Pole
     app.choose_pole_button.ButtonPushedFcn = @(~, ~) choose_pole_button_pushed_main(app, app.fig);
