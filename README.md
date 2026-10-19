@@ -29,7 +29,7 @@ Die folgenden Screenshots zeigen beispielhaft die Benutzeroberfläche der App.
 <img src="Beispiel_App_Tab_EFDD.jpg" width="800">
 
 ### Modalanalyse anhand SSI-COV und SSI-DATA
-<img src="Beispiel_App_Tab_SSI.jpg<" width="800">
+<img src="Beispiel_App_Tab_SSI.jpg" width="800">
 
 ### Ergebnis der Modalanalyse (Eigenfrequenzen, Dämpfungsgrade und Eigenformen)
 <img src="Beispiel_App_Tab_Ergebnis.jpg" width="800">
