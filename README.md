@@ -23,3 +23,4 @@ Als Bedienungsanleitung steht ein Auszug aus Kapitel 4 der Masterarbeit [Auszug 
 
 ## Einblicke in die App :camera_flash:
 ![FDD](Beispiel_App_Tab_FDD.jpg)
+![FDD](Beispiel_App_Tab_FDD_small.jpg)
