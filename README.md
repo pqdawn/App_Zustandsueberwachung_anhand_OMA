@@ -1,11 +1,11 @@
 # App_Zustandsueberwachung_anhand_OMA
 ## Worum geht es? :bulb:
-Im Rahmen einer Masterarbeit wurde eine interaktive App in `MATLAB` entwickelt. Die App ermöglicht die Auswertung von Schwingungsmessdaten mittels verschiedener _Operational Modal Analysis_ (OMA)-Methoden und unterstützt die Zustandsüberwachung von Strukturen.
+Im Rahmen einer Masterarbeit wurde eine interaktive App in `MATLAB` entwickelt. Die App ermöglicht die Auswertung von Schwingungsmessdaten mittels verschiedener _Operational Modal Analysis_ (**OMA**)-Methoden und unterstützt die Zustandsüberwachung von Strukturen.
 
 Sie umfasst drei Hauptfunktionen: 
-1. Modalanalyse
-2. Zusammenführung der Eigenformen
-3. Zustandsüberwachung
+1. **Modalanalyse**
+2. **Zusammenführung der Eigenformen**
+3. **Zustandsüberwachung**
 
 Hierfür wurden vier OMA-Methoden implementiert:
 1. _Frequency Domain Decomposition_ (**FDD**)
@@ -21,18 +21,20 @@ Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug
 
 :mailbox: Bei Fragen oder Anmerkungen können Sie sich gerne melden.
 
+
+
 ## Einblicke in die App :camera_flash:
 ### Auswertung anhand FDD
 ![FDD](Beispiel_App_Tab_FDD.jpg)
 
-Auswertung anhand EFDD:
+### Auswertung anhand EFDD
 ![EFDD](Beispiel_App_Tab_EFDD.jpg)
 
-Auswertung anhand SSI-COV oder SSI-DATA:
+### Auswertung anhand SSI-COV oder SSI-DATA
 ![SSI](Beispiel_App_Tab_SSI.jpg)
 
-Ergebnis der Modalanalyse (Eigenfrequenzen, Dämpfungsgrade und Eigenformen):
+### Ergebnis der Modalanalyse (Eigenfrequenzen, Dämpfungsgrade und Eigenformen)
 ![Ergebnis der Modalanalyse](Beispiel_App_Tab_Ergebnis.jpg)
 
-Ergebnis der Zustandsüberwachung:
+### Ergebnis der Zustandsüberwachung
 ![Ergebnis der Zustandsüberwachung](Beispiel_App_Tab_Ergebnis_Zustandsueberwachung.jpg)
