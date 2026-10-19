@@ -22,7 +22,7 @@ Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug
 ## Einblicke in die App :camera_flash:
 ### Modalanalyse anhand FDD
 ![FDD](Beispiel_App_Tab_FDD.jpg)
-<img src="Beispiel_App_Tab_FDD.jpg" width="500">
+<img src="Beispiel_App_Tab_FDD.jpg" width="800">
 
 
 ### Modalanalyse anhand EFDD
