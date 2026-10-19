@@ -22,5 +22,17 @@ Als Bedienungsanleitung steht ein Auszug aus Kapitel 4 der Masterarbeit [Auszug 
 :mailbox: Bei Fragen oder Anmerkungen können Sie sich gerne melden.
 
 ## Einblicke in die App :camera_flash:
+Auswertung anhand FDD:
 ![FDD](Beispiel_App_Tab_FDD.jpg)
-![FDD](Beispiel_App_Tab_FDD_small.jpg)
+
+Auswertung anhand EFDD:
+![EFDD](Beispiel_App_Tab_EFDD.jpg)
+
+Auswertung anhand SSI-COV oder SSI-DATA:
+![SSI](Beispiel_App_Tab_SSI.jpg)
+
+Ergebnis der Modalanalyse (Eigenfrequenzen, Dämpfungsgrade und Eigenformen):
+![Ergebnis der Modalanalyse](Beispiel_App_Tab_Ergebnis.jpg)
+
+Ergebnis der Zustandsüberwachung:
+![Ergebnis der Zustandsüberwachung](Beispiel_App_Tab_Ergebnis_Zustandsueberwachung.jpg)
