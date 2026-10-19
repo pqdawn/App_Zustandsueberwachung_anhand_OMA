@@ -20,22 +20,21 @@ Laden Sie alle Dateien dieses Repositories herunter und speichern Sie sie in ein
 Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieses Kapitel erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
 
 ## Einblicke in die App :camera_flash:
+Die folgenden Screenshots zeigen beispielhalf die Benutzeroberfläche der App.
 ### Modalanalyse anhand FDD
-![FDD](Beispiel_App_Tab_FDD.jpg)
 <img src="Beispiel_App_Tab_FDD.jpg" width="800">
 
-
 ### Modalanalyse anhand EFDD
-![EFDD](Beispiel_App_Tab_EFDD.jpg)
+<img src="Beispiel_App_Tab_EFDD.jpg" width="800">
 
 ### Modalanalyse anhand SSI-COV und SSI-DATA
-![SSI](Beispiel_App_Tab_SSI.jpg)
+<img src="Beispiel_App_Tab_SSI" width="800">
 
 ### Ergebnis der Modalanalyse (Eigenfrequenzen, Dämpfungsgrade und Eigenformen)
-![Ergebnis der Modalanalyse](Beispiel_App_Tab_Ergebnis.jpg)
+<img src="Beispiel_App_Tab_Ergebnis" width="800">
 
 ### Ergebnis der Zustandsüberwachung
-![Ergebnis der Zustandsüberwachung](Beispiel_App_Tab_Ergebnis_Zustandsueberwachung.jpg)
+<img src="Beispiel_App_Tab_Ergebnis_Zustandsueberwachung" width="800">
 
 ## Fragen? :mailbox: 
 Bei Fragen oder Anmerkungen können Sie sich gerne melden.
