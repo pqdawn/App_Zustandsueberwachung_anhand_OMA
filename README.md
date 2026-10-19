@@ -20,3 +20,6 @@ Laden Sie alle Dateien dieses Repositories herunter und speichern Sie sie in ein
 Als Bedienungsanleitung steht ein Auszug aus Kapitel 4 der Masterarbeit [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieses Kapitel erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
 
 :mailbox: Bei Fragen oder Anmerkungen können Sie sich gerne melden.
+
+## Einblicke in die App :camera_flash:
+![FDD](Beispiel_App_Tab_FDD.jpg)
