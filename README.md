@@ -8,21 +8,21 @@ Sie umfasst drei Hauptfunktionen:
 3. Zustandsüberwachung
 
 Hierfür wurden vier OMA-Methoden implementiert:
-1. _Frequency Domain Decomposition_ (FDD)
-2. _Enhanced Frequency Domain Decomposition_ (EFDD)
-3. _Covariance-driven Stochastic Subspace Identification_ (SSI-COV)
-4. _Data-driven Stochastic Subspace Identification_ (SSI-DATA)
+1. _Frequency Domain Decomposition_ (**FDD**)
+2. _Enhanced Frequency Domain Decomposition_ (**EFDD**)
+3. _Covariance-driven Stochastic Subspace Identification_ (**SSI-COV**)
+4. _Data-driven Stochastic Subspace Identification_ (**SSI-DATA**)
 
 ## Wie kann ich die App starten? :play_or_pause_button:
 Laden Sie alle Dateien dieses Repositories herunter und speichern Sie sie in einem gemeinsamen Ordner. Anschließend kann die App durch Ausführen des Skripts `Main_App.m` in `MATLAB` gestartet werden. 
 
 ## Wie kann ich die App bedienen? :computer:
-Als Bedienungsanleitung steht ein Auszug aus Kapitel 4 der Masterarbeit [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieses Kapitel erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
+Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieses Kapitel erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
 
 :mailbox: Bei Fragen oder Anmerkungen können Sie sich gerne melden.
 
 ## Einblicke in die App :camera_flash:
-Auswertung anhand FDD:
+### Auswertung anhand FDD
 ![FDD](Beispiel_App_Tab_FDD.jpg)
 
 Auswertung anhand EFDD:
