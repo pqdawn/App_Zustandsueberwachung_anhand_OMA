@@ -17,7 +17,7 @@ Hierfür wurden vier OMA-Methoden implementiert:
 Laden Sie alle Dateien dieses Repositories herunter und speichern Sie sie in einem gemeinsamen Ordner. Anschließend kann die App durch Ausführen des Skripts `Main_App.m` in `MATLAB` gestartet werden. 
 
 ## Wie kann ich die App bedienen? :computer:
-Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieses Kapitel erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
+Als Bedienungsanleitung steht ein [Auszug aus Kapitel 4 der Masterarbeit](Auszug_Kapitel_4.pdf) zur Verfügung. Dieser Auszug erläutert die wichtigsten Funktionalitäten der App sowie deren Bedienung.
 
 ## Einblicke in die App :camera_flash:
 Die folgenden Screenshots zeigen beispielhaft die Benutzeroberfläche der App.
@@ -37,5 +37,5 @@ Die folgenden Screenshots zeigen beispielhaft die Benutzeroberfläche der App.
 ### Ergebnis der Zustandsüberwachung
 <img src="README/Beispiel_App_Tab_Ergebnis_Zustandsueberwachung.jpg" width="800">
 
-## Fragen? :mailbox: 
+## Fragen? :mailbox:
 Bei Fragen oder Anmerkungen können Sie sich gerne melden.
